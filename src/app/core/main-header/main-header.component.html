@@ -1,0 +1,29 @@
+<div class="outer bg-gray-800 text-white p-4">
+  <nav class="nav-bar flex items-center justify-between">
+    <div class="logo-wrapper font-bold">
+      <img
+        class="h-12"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Wattpad_logo.png/1200px-Wattpad_logo.png"
+        alt="logo">
+    </div>
+    <div class="space-x-4">
+      <a href="#" [routerLink]="['/select-category', 'buy']"  class="hover:text-orange-600 m-3">Buy</a>
+      <a href="#" [routerLink]="['/select-category', 'sell']"  class="hover:text-orange-600 m-3">Sell</a>
+      <div class="dropdown">
+        <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Community
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark dropdown-content">
+          <li><a class="dropdown-item" href="#">People</a></li>
+          <li><a class="dropdown-item" href="#">Discussions</a></li>
+          <li><a class="dropdown-item" href="#">Events</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Share Experience</a></li>
+        </ul>
+      </div>
+      <a href="#" class="hover:text-orange-600 m-3">Vendors</a>
+      <a href="#" class="hover:text-orange-600 m-3 pr-6">About Us</a>
+      <a href="#" routerLink="/login" class="hover:text-orange-600 pr-1.5">Login / Signup</a>
+    </div>
+  </nav>
+</div>

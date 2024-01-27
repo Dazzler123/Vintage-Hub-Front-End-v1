@@ -1,0 +1,1 @@
+let EMPTY_STRING = '';

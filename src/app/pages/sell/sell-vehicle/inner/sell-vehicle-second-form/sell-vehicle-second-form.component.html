@@ -1,0 +1,131 @@
+<form class="container w-full m-0 ps-10 grid grid-cols-2 gap-4">
+  <!--  Condition & History-->
+  <div>
+    <h1 class="text-xl pt-4 pl-3 font-serif">Condition & History</h1>
+    <div class="col-12 ps-3">
+      <div class="col-12 pt-3 ps-3 m-0">
+        <mat-radio-group aria-label="Select an option">
+          <label for="inputEmail4" class="form-label font-bold">Select Condition</label>
+          <br>
+          <mat-radio-button value="1">Brand New</mat-radio-button>
+          <mat-radio-button value="2">Used</mat-radio-button>
+          <mat-radio-button value="3">Refurbished</mat-radio-button>
+          <mat-radio-button value="4">Other</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="form-floating col-12 mt-4">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Service History</label>
+      </div>
+      <div class="form-floating col-12 mt-4">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea">Accident History</label>
+      </div>
+      <div class="col-12 mt-4">
+        <div class="col-12">
+          <label for="inputEmail4" class="form-label font-bold">Number of Previous Owners</label>
+          <input type="number" class="form-control" id="inputEmail4" placeholder="Number of Owners">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Pricing & Transaction Details-->
+  <div>
+    <h1 class="text-xl pt-4 pl-3 font-serif">Pricing & Transaction Details</h1>
+    <div class="col-12 ps-3">
+      <div class="col-12 mt-4">
+        <div class="col-12">
+          <label for="inputEmail4" class="form-label font-bold">Listing Price (LKR)</label>
+          <input type="number" class="form-control" id="inputEmail4" placeholder="Ex: 1,300,000.00">
+          <label for="inputEmail4" class="form-label font-extralight italic pt-2">You can enter your expecting listing price or generate
+          a price from our high tech prediction model.</label>
+          <button type="button" class="btn btn-outline-primary">
+            Suggest Price</button>
+          <label for="inputEmail4" class="form-label font-bold italic pt-1 ms-3" style="color: green">Try it out for FREE!</label>
+<!--          <div class="spinner-border text-primary ms-5 mt-3" role="status">-->
+<!--            <span class="visually-hidden m-0 p-0">Loading...</span>-->
+<!--          </div>-->
+        </div>
+        <div class="form-check mt-4 ps-4">
+          <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label font-bold" for="flexRadioDefault1">
+            Negotiable
+          </label>
+        </div>
+      </div>
+      <div class="col-12 pt-5 m-0">
+        <mat-radio-group aria-label="Select an option">
+          <label for="inputEmail4" class="form-label font-bold" style="color: red">Include Contractors (Brokers)</label>
+          <br>
+          <mat-radio-button value="1">Yes</mat-radio-button>
+          <mat-radio-button value="2">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2>Multiple Image Upload</h2>
+
+    <!-- Input field for multiple image upload -->
+    <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input" id="imageInput" (change)="handleFileInput($event)" multiple>
+      <label class="custom-file-label" for="imageInput">Choose files</label>
+    </div>
+
+    <!-- Display uploaded images -->
+    <div id="imagePreview" class="mt-3 h-2/6">
+<!--      <img *ngFor="let image of selectedImages" [src]="image" class="img-thumbnail mr-2 mb-2">-->
+    </div>
+  </div>
+
+
+  <!-- Upload Images -->
+  <div>
+    <h1 class="text-xl pt-4 pl-3 font-serif">Upload Images</h1>
+    <div class="col-12 ps-3">
+      <div class="col-12 mt-4">
+        <div class="col-12">
+          <label for="inputEmail4" class="form-label font-bold">Listing Price (LKR)</label>
+          <input type="number" class="form-control" id="inputEmail4" placeholder="Ex: 1,300,000.00">
+          <label for="inputEmail4" class="form-label font-extralight italic pt-2">You can enter your expecting listing price or generate
+            a price from our high tech prediction model.</label>
+          <button type="button" class="btn btn-outline-primary">
+            Suggest Price</button>
+          <label for="inputEmail4" class="form-label font-bold italic pt-1 ms-3" style="color: green">Try it out for FREE!</label>
+          <!--          <div class="spinner-border text-primary ms-5 mt-3" role="status">-->
+          <!--            <span class="visually-hidden m-0 p-0">Loading...</span>-->
+          <!--          </div>-->
+        </div>
+        <div class="form-check mt-4 ps-4">
+          <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label font-bold" for="flexRadioDefault1">
+            Negotiable
+          </label>
+        </div>
+      </div>
+      <div class="col-12 pt-5 m-0">
+        <mat-radio-group aria-label="Select an option">
+          <label for="inputEmail4" class="form-label font-bold" style="color: red">Include Contractors (Brokers)</label>
+          <br>
+          <mat-radio-button value="1">Yes</mat-radio-button>
+          <mat-radio-button value="2">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 mt-10 mb-5">
+    <div class="col-5">
+      <button type="button" class="btn btn-outline-primary" (click)="navigateToPreviousPage('/sell-vehicle')"> << Go Back</button>
+    </div>
+    <div class="col-5">
+      <button type="button" class="btn btn-outline-warning">Reset</button>
+    </div>
+    <div class="col-5">
+      <button type="button" class="btn btn-outline-success font-bold">
+        Post Vehicle</button>
+    </div>
+  </div>
+</form>

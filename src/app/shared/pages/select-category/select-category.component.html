@@ -1,0 +1,25 @@
+<div class="container flex flex-col items-center justify-center">
+  <h1 class="text-4xl font-thin mt-5 mb-12 text-center">Select Category to {{actionType.charAt(0).toUpperCase()}}{{actionType.slice(1)}}</h1>
+  <div class="container mx-auto">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3 inner mx-auto">
+        <app-select-category-card [cardTitle]="'Vehicles'"
+                                  [cardDescription]=vehicleDesc
+                                  [featurePath]=actionType
+                                  [actionTypePath]="'vehicle'"></app-select-category-card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3 inner mx-auto">
+        <app-select-category-card [cardTitle]="'Parts'"
+                                  [cardDescription]=partsDesc
+                                  [featurePath]=actionType
+                                  [actionTypePath]="'parts'"></app-select-category-card>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 col-xl-3 inner mx-auto">
+        <app-select-category-card [cardTitle]="'Other Accessories'"
+                                  [cardDescription]=otherAccessoriesDesc
+                                  [featurePath]=actionType
+                                  [actionTypePath]="'other'"></app-select-category-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,205 @@
+<form #myForm="ngForm" class="container w-full m-0 ps-10 grid grid-cols-2 gap-4">
+  <!--  Basic Information-->
+  <div>
+    <h1 class="text-xl pt-4 pl-3 font-serif m">Basic Information</h1>
+    <div class="col-6 ps-3">
+      <div class="col-12">
+        <label for="sell-vehicle-reg-no" class="form-label font-bold" style="color: red">Enter Vehicle Registration
+          Number</label>
+        <input type="email" class="form-control" id="sell-vehicle-reg-no" placeholder="Ex: (WP) CAU-2024">
+        <label for="sell-vehicle-reg-no" class="form-label font-extralight italic pt-1">Your registration number will be
+          encorded.</label>
+      </div>
+      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-make">
+        <option selected>Select Make</option>
+        <option value="1">Benz</option>
+        <option value="2">Toyota</option>
+        <!-- Add more options as needed -->
+      </select>
+      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-model">
+        <option selected>Select Model</option>
+        <option value="1">CLA 200</option>
+        <option value="2">Premio LS</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+  </div>
+  <div class="col-11 m-0 p-0">
+    <select class="form-select col-12 mt-24" aria-label="Default select example" id="sell-vehicle-yom">
+      <option selected>Year of Manufacture (YOM)</option>
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <!-- Add more options as needed -->
+    </select>
+    <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-mileage">
+      <option selected>Mileage (Select Range)</option>
+      <option value="2000">5 to 10kmpl</option>
+      <option value="2001">10 to 15 kmpl</option>
+      <option value="2001">15 to 20 kmpl</option>
+      <option value="2001">20 to 25 kmpl</option>
+      <option value="2001">25 to 30 kmpl</option>
+      <option value="2001">30 to 35 kmpl</option>
+      <!-- Add more options as needed -->
+    </select>
+    <div class="col-12 pt-5 ps-3">
+      <mat-radio-group aria-label="Select an option" id="sell-vehicle-fuel-type">
+        <label class="form-label font-bold">Select Fuel Type</label>
+        <br>
+        <mat-radio-button value="1">Petrol</mat-radio-button>
+        <mat-radio-button value="2">Diesel</mat-radio-button>
+        <mat-radio-button value="3">Electric</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <!--  Technical Specifications-->
+  <div>
+    <h1 class="text-xl pt-4 pl-3 font-serif">Technical Specifications</h1>
+    <div class="col-6 ps-3">
+      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-engine-capacity">
+        <option selected>Engine Type & Capacity</option>
+        <option value="2000">5 to 10kmpl</option>
+        <option value="2001">10 to 15 kmpl</option>
+      </select>
+
+      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-transmission">
+        <option selected>Transmission Type</option>
+        <option value="2000">4 Speed</option>
+        <option value="2001">5 Speed</option>
+        <option value="2001">6 Speed</option>
+        <option value="2001">7 Speed</option>
+      </select>
+
+      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-drivetrain">
+        <option selected>Drivetrain Specification</option>
+        <option value="2000">Front Wheel Drive</option>
+        <option value="2001">Rear Wheel Drive</option>
+        <option value="2001">All Wheel Drive</option>
+      </select>
+      <div class="col-12 mt-4">
+        <label for="sell-vehicle-horsepower" class="form-label font-bold">Enter Horsepower / Torque (Optional)</label>
+        <input type="email" class="form-control" id="sell-vehicle-horsepower" placeholder="Ex: (WP) CAU-2024">
+      </div>
+      <div class="col-12 mt-3">
+        <div class="col-12">
+          <label for="sell-vehicle-kmpl" class="form-label font-bold">Fuel Efficiency (KMPL)</label>
+          <input type="number" class="form-control" id="sell-vehicle-kmpl" placeholder="KMP/L">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Exterior Features-->
+  <div>
+    <h1 class="text-xl pt-4 pl-3 font-serif">Exterior Features</h1>
+    <div class="col-6 ps-3">
+      <div class="col-12 mt-4">
+        <label for="sell-vehicle-color" class="form-label font-bold">Select Color</label>
+        <input type="color" class="form-control" id="sell-vehicle-color" placeholder="Ex: (WP) CAU-2024">
+      </div>
+
+      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-body-type">
+        <option selected>Body Type</option>
+        <option value="2000">SUV</option>
+        <option value="2001">Sedan</option>
+        <option value="2001">Coupe</option>
+        <option value="2001">Hatchback</option>
+      </select>
+
+      <label for="sell-vehicle-wheel-size" class="form-label font-bold mt-4">Wheel Size & Type (Optional)</label>
+      <select class="form-select col-12" aria-label="Default select example" id="sell-vehicle-wheel-size">
+        <option selected>12 inch Alloy</option>
+        <option value="2000">Front Wheel Drive</option>
+        <option value="2001">Rear Wheel Drive</option>
+        <option value="2001">All Wheel Drive</option>
+      </select>
+      <div class="col-12 mt-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="sell-vehicle-sunroof">
+          <label class="form-check-label" for="sell-vehicle-sunroof">
+            Sunroof (Optional)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="sell-vehicle-convertible">
+          <label class="form-check-label" for="sell-vehicle-convertible">
+            Convertible (Optional)
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Interior Features-->
+  <div>
+    <h1 class="text-xl pt-4 pl-3 font-serif">Interior Features</h1>
+    <div class="col-6 ps-3">
+      <div class="col-12 mt-4">
+        <label for="sell-vehicle-interior-color" class="form-label font-bold">Select Interior Color (Optional)</label>
+        <input type="color" class="form-control" id="sell-vehicle-interior-color" placeholder="Ex: (WP) CAU-2024">
+      </div>
+      <div class="col-12 mt-4">
+        <label for="sell-vehicle-seating" class="form-label font-bold">Seating Capacity</label>
+        <input type="number" class="form-control" id="sell-vehicle-seating">
+      </div>
+      <div class="col-12 mt-4">
+        <label for="sell-vehicle-infotainment" class="form-label font-bold">Infotainment System (Optional)</label>
+        <input type="text" class="form-control" id="sell-vehicle-infotainment" placeholder="Ex: Harman Kardon">
+      </div>
+    </div>
+  </div>
+
+  <!--  Safety Features-->
+  <div>
+    <h1 class="text-xl pt-4 pl-3 font-serif">Safety Features</h1>
+    <div class="col-6 ps-3">
+      <div class="col-12 mt-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="sell-vehicle-airbag-status">
+          <label class="form-check-label font-bold" for="sell-vehicle-airbag-status">
+            Have Airbags ?
+          </label>
+        </div>
+      </div>
+      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-abs">
+        <option selected>Select ABS Type (Optional)</option>
+        <option value="2000">No ABS</option>
+        <option value="2001">Single Channel ABS</option>
+        <option value="2001">Dual Channel ABS</option>
+      </select>
+      <label for="sell-vehicle-esc" class="form-label font-bold mt-4">Select ECS (Electronic Stability Control)
+        (Optional)</label>
+      <select class="form-select col-12" aria-label="Default select example" id="sell-vehicle-esc">
+        <option selected>No ESC</option>
+        <option value="2000">Standard ESC</option>
+        <option value="2001">Advanced ESC</option>
+        <option value="2001">Manufacturer-Specific ESC</option>
+        <option value="2001">Other</option>
+      </select>
+      <label for="sell-vehicle-cas" class="form-label font-bold mt-4">Select CAS (Collision Avoidance System)
+        (Optional)</label>
+      <select class="form-select col-12" aria-label="Default select example" id="sell-vehicle-cas">
+        <option selected>No CAS</option>
+        <option value="2000">Forward Collision Warning (FCW)</option>
+        <option value="2001">Automatic Emergency Braking (AEB)</option>
+        <option value="2001">Lane Departure Warning (LDW)</option>
+        <option value="2001">Blind Spot Detection</option>
+        <option value="2001">Adaptive Cruise Control (ACC)</option>
+        <option value="2001">Cross Traffic Alert (CTA)</option>
+        <option value="2001">Collision Mitigation System</option>
+        <option value="2001">Other</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-12 mt-10 mb-5">
+    <div class="col-5">
+      <button type="button" class="btn btn-outline-warning" (click)="resetForm(myForm)">Reset</button>
+    </div>
+    <div class="col-5">
+      <button type="button" class="btn btn-outline-primary"
+              (click)="navigateToNextPage('/sell-vehicle-second-page',myForm)">
+        Next Page >>
+      </button>
+    </div>
+  </div>
+</form>
