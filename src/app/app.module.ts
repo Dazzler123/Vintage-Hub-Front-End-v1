@@ -7,7 +7,7 @@ import {FormsModule} from "@angular/forms";
 import {MainHeaderComponent} from "./core/main-header/main-header.component";
 import {MainFooterComponent} from "./core/main-footer/main-footer.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatRadioModule} from "@angular/material/radio";
+import {MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule} from "@angular/material/radio";
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
@@ -25,7 +25,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatRadioModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    { provide: MAT_RADIO_DEFAULT_OPTIONS, useValue: { color: 'black' } }
   ],
   bootstrap: [AppComponent]
 })

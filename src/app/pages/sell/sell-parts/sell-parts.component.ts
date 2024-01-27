@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MatRadioModule} from '@angular/material/radio';
 import {FormsModule} from "@angular/forms";
 import {CrudTransactionService} from "../service/sell-parts/crud-transactions/crud-transaction.service";
+import {SaveSuccessAlertService} from "../../../shared/alerts/saved/save-success-alert.service";
+import {SaveFailedAlertService} from "../../../shared/alerts/saved/save-failed-alert.service";
 
 @Component({
   selector: 'app-sell-parts',
@@ -27,8 +29,9 @@ export class SellPartsComponent {
   partPrice: number | null = null;
   partNegotiable: boolean = false;
 
-  constructor(private crudService: CrudTransactionService) {}
-
+  constructor(private crudService: CrudTransactionService, private successAlertService: SaveSuccessAlertService,
+              private failedAlertService: SaveFailedAlertService) {
+  }
 
   // save part
   postItem() {
@@ -38,8 +41,8 @@ export class SellPartsComponent {
       make: this.partMake,
       partNumber: this.partNumber,
       manufacturer: this.partManufacturer,
-      oem: this.partOemAftermarket == "OEM" ? "Y" : null,
-      aftermarket: this.partOemAftermarket == "Aftermarket" ? "Y" : null,
+      oem: this.partOemAftermarket == "OEM" ? true : null,
+      aftermarket: this.partOemAftermarket == "Aftermarket" ? true : null,
       condition: this.partCondition,
       description: this.partDescription,
       compatibility: this.partCompatibility,
@@ -48,13 +51,20 @@ export class SellPartsComponent {
       negotiable: this.partNegotiable
     };
 
+    console.log(formData)
 
     // Call the service method to send data to Python backend
     this.crudService.saveSparePart(formData).subscribe(
-      response => {
-        console.log('Data sent successfully', response);
+      (success: boolean) => {
+        if (success) {
+          this.successAlertService.triggerSaveSuccessAlert('Part Created!', 1600);
+          console.log('Data saved successfully');
+        } else {
+          this.failedAlertService.triggerSaveFailedAlert('Error saving part', 1700);
+        }
       },
       error => {
+        this.failedAlertService.triggerSaveFailedAlert('Error saving part', 2100);
         console.error('Error sending data', error);
       }
     );

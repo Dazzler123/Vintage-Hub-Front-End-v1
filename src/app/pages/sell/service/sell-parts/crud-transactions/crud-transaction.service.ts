@@ -6,15 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CrudTransactionService {
-  // Replace with your Python backend URL
-  private backendUrl = 'http://127.0.0.1:5000/';
+  // Python backend URL
+  private backendUrl = 'http://127.0.0.1:8000';
 
   constructor(private http: HttpClient) {}
 
-  // Method to send data to Python backend
   saveSparePart(formData: any): Observable<any> {
     // Adjust the URL and API endpoint based on your backend
-    const apiUrl = `${this.backendUrl}/api/parts/save-part`;
+    const apiUrl = `${this.backendUrl}/api/parts/v1-create-part`;
 
     // Send a POST request to the backend
     return this.http.post(apiUrl, formData);

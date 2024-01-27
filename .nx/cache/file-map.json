@@ -20,6 +20,7 @@
     "postcss-cssnext": "^3.1.1",
     "router": "^1.3.8",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.10.4",
     "tailwindcss": "^3.4.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2",
@@ -166,12 +167,13 @@
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "4482096098446273958",
+          "hash": "5688004212906099865",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser",
             "npm:@angular/forms",
-            "npm:@angular/material"
+            "npm:@angular/material",
+            "npm:@angular/common"
           ]
         },
         {
@@ -535,7 +537,7 @@
         },
         {
           "file": "src/app/pages/sell/sell-other/sell-other.component.html",
-          "hash": "10811653341709523754"
+          "hash": "278479413625477835"
         },
         {
           "file": "src/app/pages/sell/sell-other/sell-other.component.scss",
@@ -550,15 +552,16 @@
         },
         {
           "file": "src/app/pages/sell/sell-other/sell-other.component.ts",
-          "hash": "11476405481358666922",
+          "hash": "2372399787945732020",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/material"
+            "npm:@angular/material",
+            "npm:@angular/forms"
           ]
         },
         {
           "file": "src/app/pages/sell/sell-parts/sell-parts.component.html",
-          "hash": "17729608825157798975"
+          "hash": "278479413625477835"
         },
         {
           "file": "src/app/pages/sell/sell-parts/sell-parts.component.scss",
@@ -573,7 +576,7 @@
         },
         {
           "file": "src/app/pages/sell/sell-parts/sell-parts.component.ts",
-          "hash": "3714513421093553337",
+          "hash": "15947726593943243198",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/material",
@@ -644,6 +647,22 @@
           ]
         },
         {
+          "file": "src/app/pages/sell/service/sell-other/crud-transactions/crud-transaction.service.spec.ts",
+          "hash": "3040065715047453495",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/pages/sell/service/sell-other/crud-transactions/crud-transaction.service.ts",
+          "hash": "10267805184896016792",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
           "file": "src/app/pages/sell/service/sell-parts/crud-transactions/crud-transaction.service.spec.ts",
           "hash": "3040065715047453495",
           "deps": [
@@ -652,7 +671,7 @@
         },
         {
           "file": "src/app/pages/sell/service/sell-parts/crud-transactions/crud-transaction.service.ts",
-          "hash": "10115362034091301763",
+          "hash": "17161850022491380644",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",

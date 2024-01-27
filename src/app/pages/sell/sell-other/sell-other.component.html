@@ -1,81 +1,100 @@
 <form class="container w-full m-0 ps-10 grid grid-cols-2 gap-4">
   <!-- Title-->
   <div>
-    <label for="inputEmail4" class="form-label font-bold pt-5 pl-3 text-xl">Title</label>
+    <label for="sell-part-title" class="form-label font-bold pt-5 pl-3 text-xl">Title</label>
     <div class="columns-1 ps-3">
       <div class="col-12">
-        <label for="inputEmail4" class="form-label font-bold" style="color: darkblue">Enter a suitable title for your product. Better
+        <label for="sell-part-title" class="form-label font-bold" style="color: darkblue">Enter a suitable title for
+          your product. Better
           to include a meaningful and short-descriptive one.</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Ex: (WP) CAU-2024">
+        <input type="text" class="form-control" id="sell-part-title" [(ngModel)]="partTitle" name="partTitle">
       </div>
-      <select class="form-select col-12 mt-4" aria-label="Default select example">
+      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-part-make"
+              [(ngModel)]="partMake" name="partMake">
         <option selected>Select Make</option>
         <option value="1">Benz</option>
         <option value="2">Toyota</option>
       </select>
       <div class="col-12 mt-4">
-        <label for="inputEmail4" class="form-label font-bold">Enter Part Number (if available)</label>
-        <input type="text" class="form-control" id="inputEmail4" placeholder="1P3-4ES-022-1329">
+        <label for="sell-part-part-number" class="form-label font-bold">Enter Part Number (if available)</label>
+        <input type="text" class="form-control" id="sell-part-part-number" [(ngModel)]="partNumber" name="partNumber"
+               placeholder="1P3-4ES-022-1329">
       </div>
-      <label for="inputEmail4" class="form-label font-bold mt-4">Select Brand/Manufacturer (Optional)</label>
-      <select class="form-select col-12" aria-label="Default select example">
+      <label for="sell-part-manufacturer" class="form-label font-bold mt-4">Select Brand/Manufacturer (Optional)</label>
+      <select class="form-select col-12" aria-label="Default select example" [(ngModel)]="partManufacturer" name="partManufacturer"
+              id="sell-part-manufacturer">
         <option selected>Select Brand/Manufacturer</option>
         <option value="1">CLA 200</option>
         <option value="2">Premio LS</option>
       </select>
       <div class="col-12 mt-4 ps-1 m-0">
-        <mat-radio-group aria-label="Select an option">
-          <label for="inputEmail4" class="form-label font-bold">OEM ? Aftermarket ??</label>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="partOemAftermarket" name="partOemAftermarket">
+          <label class="form-label font-bold">OEM ? Aftermarket ??</label>
           <br>
-          <mat-radio-button value="1">OEM</mat-radio-button>
-          <mat-radio-button value="2">Aftermarket</mat-radio-button>
+          <mat-radio-button value="OEM">OEM</mat-radio-button>
+          <mat-radio-button value="Aftermarket">Aftermarket</mat-radio-button>
         </mat-radio-group>
       </div>
       <div class="col-12 mt-4 ps-1 m-0">
-        <mat-radio-group aria-label="Select an option">
-          <label for="inputEmail4" class="form-label font-bold">Select Condition</label>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="partCondition" name="partCondition">
+          <label class="form-label font-bold">Select Condition</label>
           <br>
-          <mat-radio-button value="1">Brand New</mat-radio-button>
-          <mat-radio-button value="2">Used</mat-radio-button>
-          <mat-radio-button value="3">Refurbished</mat-radio-button>
-          <mat-radio-button value="4">Other</mat-radio-button>
+          <mat-radio-button value="B">Brand New</mat-radio-button>
+          <mat-radio-button value="U">Used</mat-radio-button>
+          <mat-radio-button value="R">Refurbished</mat-radio-button>
+          <mat-radio-button value="O">Other</mat-radio-button>
         </mat-radio-group>
       </div>
-      <label for="inputEmail4" class="form-label font-bold text-xl mt-4">Upload Image</label>
+      <label class="form-label font-bold text-xl mt-4">Upload Image</label>
       <div class="col-12">
-        <label for="inputEmail4" class="form-label font-bold" style="color: red">Upload at least one captured image of the part.</label>
+        <label class="form-label font-bold" style="color: red">Upload at least one captured image of
+          the part.</label>
         <br>
         <input type="file" class="custom-file-input" id="imageInput" multiple>
       </div>
     </div>
   </div>
   <div class="col-11 m-0 pt-5">
-    <label for="inputEmail4" class="form-label font-bold text-xl">Part Description</label>
+    <label for="sell=part-description" class="form-label font-bold text-xl">Part Description</label>
     <div class="col-12">
-      <label for="inputEmail4" class="form-label font-bold" style="color: darkblue">Provide a detailed description
-        of the part. Include information about its condition, age, and any specific details that a buyer might need to know.</label>
-      <textarea type="text" class="form-control" id="inputEmail4" style="height: 30vh"></textarea>
+      <label for="sell=part-description" class="form-label font-bold" style="color: darkblue">Provide a detailed
+        description
+        of the part. Include information about its condition, age, and any specific details that a buyer might need to
+        know.</label>
+      <textarea type="text"
+                class="form-control"
+                [(ngModel)]="partDescription"
+                name="partDescription"
+                id="sell=part-description"
+                style="height: 30vh"></textarea>
     </div>
-    <label for="inputEmail4" class="form-label font-bold text-xl mt-4">Vehicle Compatibility</label>
+    <label for="sell=part-compatibility" class="form-label font-bold text-xl mt-4">Vehicle Compatibility</label>
     <div class="col-12">
-      <label for="inputEmail4" class="form-label font-bold" style="color: darkblue">Specify the make, model, and year of vehicles
-        that the part is compatible with. This helps potential buyers determine if the part will fit their vehicle.</label>
-      <textarea type="text" class="form-control" id="inputEmail4" style="height: 20vh"></textarea>
+      <label for="sell=part-compatibility" class="form-label font-bold" style="color: darkblue">Specify the make, model,
+        and year of vehicles
+        that the part is compatible with. This helps potential buyers determine if the part will fit their
+        vehicle.</label>
+      <textarea [(ngModel)]="partCompatibility" name="partCompatibility" class="form-control" id="sell=part-compatibility" style="height: 20vh"
+                type="text"></textarea>
     </div>
-    <label for="inputEmail4" class="form-label font-bold text-xl mt-4">Additional Information</label>
+    <label for="sell=part-additional-info" class="form-label font-bold text-xl mt-4">Additional Information</label>
     <div class="col-12">
-      <label for="inputEmail4" class="form-label font-bold" style="color: darkblue">Provide a short description on shipping information,
+      <label for="sell=part-additional-info" class="form-label font-bold" style="color: darkblue">Provide a short
+        description on shipping information,
         location, contact information, payment methods or return policies if required.</label>
-      <textarea type="text" class="form-control" id="inputEmail4" style="height: 20vh"></textarea>
+      <textarea type="text" class="form-control" [(ngModel)]="partAdditionalInfo" name="partAdditionalInfo" id="sell=part-additional-info"
+                style="height: 20vh"></textarea>
     </div>
     <div class="col-12 mt-5 col-12 content-end">
       <div class="col-5">
-        <label for="inputEmail4" class="form-label font-bold text-xl" style="color: red">Listing Price (LKR)</label>
-        <input type="number" class="form-control" id="inputEmail4" placeholder="Ex: 1,300,000.00">
+        <label for="sell=part-price" class="form-label font-bold text-xl" style="color: red">Listing Price (LKR)</label>
+        <input type="number" class="form-control" [(ngModel)]="partPrice" name="partPrice" id="sell=part-price"
+               placeholder="Ex: 1,300,000.00">
       </div>
       <div class="form-check mt-4 ps-4">
-        <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label font-bold" for="flexRadioDefault1">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="partNegotiable" name="partNegotiable" id="flexRadioDefault1">
+        <label class="form-check-label font-bold" for="flexRadioDefault1"
+               id="sell-part-negotiable-status">
           Negotiable
         </label>
       </div>
@@ -86,8 +105,7 @@
           <button type="button" class="btn btn-outline-warning">Reset</button>
         </div>
         <div class="col-12">
-          <button type="button" class="btn btn-outline-success font-bold">
-            Post Item</button>
+          <button type="button" class="btn btn-outline-success font-bold" (click)="postItem()">Post Item</button>
         </div>
       </div>
     </div>
