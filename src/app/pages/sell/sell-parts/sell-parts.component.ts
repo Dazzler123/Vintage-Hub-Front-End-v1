@@ -4,6 +4,8 @@ import {FormsModule} from "@angular/forms";
 import {CrudTransactionService} from "../service/sell-parts/crud-transactions/crud-transaction.service";
 import {SaveSuccessAlertService} from "../../../shared/alerts/saved/save-success-alert.service";
 import {SaveFailedAlertService} from "../../../shared/alerts/saved/save-failed-alert.service";
+// @ts-ignore
+import {Messages} from "../../../common/parts/messages.js";
 
 @Component({
   selector: 'app-sell-parts',
@@ -57,14 +59,14 @@ export class SellPartsComponent {
     this.crudService.saveSparePart(formData).subscribe(
       (success: boolean) => {
         if (success) {
-          this.successAlertService.triggerSaveSuccessAlert('Part Created!', 1600);
+          this.successAlertService.triggerSaveSuccessAlert(Messages.PART_SAVED, 1600);
           console.log('Data saved successfully');
         } else {
-          this.failedAlertService.triggerSaveFailedAlert('Error saving part', 1700);
+          this.failedAlertService.triggerSaveFailedAlert(Messages.PART_SAVE_FAILED, 1700);
         }
       },
       error => {
-        this.failedAlertService.triggerSaveFailedAlert('Error saving part', 2100);
+        this.failedAlertService.triggerSaveFailedAlert(Messages.PART_SAVE_FAILED, 2100);
         console.error('Error sending data', error);
       }
     );
