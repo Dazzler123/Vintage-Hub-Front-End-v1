@@ -1,90 +1,82 @@
-<main>
-  <section>
-    <form action="#" class="form">
-      <fieldset>
-        <legend>Create a new Vendor account</legend>
-        <div class="input-group">
-          <label for="username" class="label">Username</label>
-          <input id="username" placeholder="John Doe" type="text" class="input">
-          <span class="error-message"></span>
-          <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>check-circle</title>
-            <g fill="none">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-          </svg>
-
-          <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>exclamation-circle</title>
-            <g fill="none">
-              <path d="M12 8v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-          </svg>
+<div id="vendor-signup-page" class="justify-center container">
+  <form id="customerForm" class="mt-5 col-11 pb-5 w-full">
+    <h1 class="text-2xl text-center" id="staticBackdropLabel">Join us as a Vendor</h1>
+    <div class="row g-3 mb-3 mt-3">
+      <!-------------name & address------------->
+      <div class="col">
+        <label class="form-label">Full Name</label>
+        <input id="txtCustomerName" type="text" class="form-control fw-light"
+               placeholder="D B Hewagamage" aria-label="">
+        <div class="form-text fst-italic">Please enter your full name with initials.</div>
+      </div>
+      <div class="col">
+        <label class="form-label">Address</label>
+        <input id="txtCustomerAddress" type="text" class="form-control form-control fw-light"
+               placeholder="23/1, Galle Road, Panadura" aria-label="">
+      </div>
+    </div>
+    <!----------nic, email & contact no----------->
+    <div class="row g-3 mb-3">
+      <div class="col">
+        <label class="form-label">National Identity Card Number</label>
+        <input id="txtCustomerNIC" type="text" class="form-control fw-light"
+               placeholder="923478293492V" aria-label="">
+      </div>
+      <div class="col">
+        <label class="form-label">Email address</label>
+        <input id="txtCustomerEmail" type="text" class="form-control form-control fw-light"
+               placeholder="pragmaticdeveloper@gmail.com" aria-label="">
+      </div>
+      <div class="col">
+        <label class="form-label">Contact Number</label>
+        <input id="txtCustomerContactNo" type="text" class="form-control form-control fw-light"
+               placeholder="0773434343"
+               aria-label="">
+      </div>
+    </div>
+    <!-------------dl no & gender------------>
+    <div class="row g-3">
+      <div class="col-4">
+        <label class="form-label">Driving License Number</label>
+        <input id="txtCustomerDLNo" type="text" class="form-control fw-light"
+               placeholder="9234782934920" aria-label="">
+      </div>
+      <div class="col-4 pt-4">
+        <select id="cbxCustomerGender" class="form-select" aria-label="Default select example">
+          <option selected>Select Gender</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+          <option value="3">Other</option>
+        </select>
+      </div>
+    </div>
+    <!---------dl image & nic image--------->
+    <div class="row g-3 mt-3">
+      <div class="col-8">
+        <label class="form-label fw-light">Upload National Identity Card Image or Driving License
+          Image</label>
+        <input id="nicDlImageFile" class="form-control" type="file">
+      </div>
+    </div>
+    <!------------username & password---------->
+    <div class="row g-3 mt-3">
+      <div class="col-6">
+        <input id="txtCustomerUsername" type="text" class="form-control" placeholder="New Username">
+        <div class="form-text fst-italic">Your username should be least three characters long and
+          must not contain special characters or emoji's.
         </div>
-
-        <div class="input-group">
-          <label for="email" class="label">Email</label>
-          <input id="email" type="email" class="input" autocomplete placeholder="john.doe@example.com">
-          <span class="error-message"></span>
-          <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>check-circle</title>
-            <g fill="none">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-          </svg>
-
-          <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>exclamation-circle</title>
-            <g fill="none">
-              <path d="M12 8v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-          </svg>
+      </div>
+      <div class="col-6">
+        <input id="pwdCustomerPassword" type="password" class="form-control"
+               placeholder="New Password">
+        <div class="form-text fst-italic">Your password must be 8-20 characters long, contain
+          letters and numbers,
+          and must not contain spaces, special characters, or emoji's.
         </div>
+      </div>
+    </div>
+    <!-----------save vendor details----------->
+    <button id="btnSaveCustomer" type="submit" class="btn btn-outline-primary mt-4 col-4">Create</button>
+  </form>
 
-        <div class="input-group">
-          <label for="password" class="label">Password</label>
-          <input id="password" type="password" class="input" placeholder="••••••••">
-          <span class="error-message"></span>
-          <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>check-circle</title>
-            <g fill="none">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-          </svg>
-
-          <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>exclamation-circle</title>
-            <g fill="none">
-              <path d="M12 8v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-          </svg>
-        </div>
-
-        <div class="input-group">
-          <label for="password_confirmation" class="label">Password Confirmation</label>
-          <input id="password_confirmation" type="password" class="input" placeholder="••••••••">
-          <span class="error-message"></span>
-          <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>check-circle</title>
-            <g fill="none">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-          </svg>
-
-          <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>exclamation-circle</title>
-            <g fill="none">
-              <path d="M12 8v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-          </svg>
-        </div>
-      </fieldset>
-
-      <input type="submit" value="Create account">
-
-      <footer>
-        <p>Already have an account? <a routerLink="/login">Sign in</a></p>
-      </footer>
-    </form>
-  </section>
-</main>
+</div>
