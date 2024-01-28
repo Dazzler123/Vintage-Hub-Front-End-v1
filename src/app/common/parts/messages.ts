@@ -2,11 +2,11 @@ export class Messages {
 
 // ===================== SUCCESS MESSAGES ========================
 
-  PART_SAVED = 'Part Created!';
+  static PART_SAVED: string = 'Part Created!';
 
 
 // ===================== ERROR MESSAGES ========================
 
-  PART_SAVE_FAILED = 'Create Failed!';
+  static PART_SAVE_FAILED: string = 'Create Failed!';
 
 }

@@ -2,9 +2,9 @@ import {Component} from '@angular/core';
 import {MatRadioModule} from '@angular/material/radio';
 import {FormsModule} from "@angular/forms";
 import {CrudTransactionService} from "../service/sell-parts/crud-transactions/crud-transaction.service";
-import {SaveSuccessAlertService} from "@app/shared/alerts/saved/save-success-alert.service";
-import {SaveFailedAlertService} from "@app/shared/alerts/saved/save-failed-alert.service";
-import {Messages} from "@app/common/parts/messages";
+import {SaveSuccessAlertService} from "../../../shared/alerts/saved/save-success-alert.service";
+import {SaveFailedAlertService} from "../../../shared/alerts/saved/save-failed-alert.service";
+import {Messages} from "@common/parts/messages";
 
 @Component({
   selector: 'app-sell-parts',
