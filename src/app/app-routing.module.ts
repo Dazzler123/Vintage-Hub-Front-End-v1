@@ -19,6 +19,7 @@ import {
   SellVehicleSecondFormComponent
 } from "./pages/sell/sell-vehicle/inner/sell-vehicle-second-form/sell-vehicle-second-form.component";
 import {SellPartsComponent} from "./pages/sell/sell-parts/sell-parts.component";
+import {VendorSignupPageComponent} from "./pages/security/vendor-signup-page/vendor-signup-page.component";
 
 const routes: Routes = [{path:'', redirectTo:'/home', pathMatch:'full'},
   {path:'home', component:HomePageComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [{path:'', redirectTo:'/home', pathMatch:'full'},
   {path:'sell-vehicle-second-page', component:SellVehicleSecondFormComponent},
   {path:'login', component:LoginPageComponent},
   {path:'signup', component:SignupPageComponent},
+  {path:'vendor-signup', component:VendorSignupPageComponent},
   {path:'forgot-password', component:ForgotPasswordPageComponent},
   {path:'otp-verification', component:OtpVerificationPageComponent},
   {path:'reset-password', component:ResetPasswordPageComponent},

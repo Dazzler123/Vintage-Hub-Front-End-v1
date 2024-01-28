@@ -61,11 +61,11 @@ export class SellPartsComponent {
           this.successAlertService.triggerSaveSuccessAlert(Messages.PART_SAVED, 1600);
           console.log('Data saved successfully');
         } else {
-          this.failedAlertService.triggerSaveFailedAlert(Messages.PART_SAVE_FAILED, 1700);
+          this.failedAlertService.triggerSaveFailedAlert(Messages.CREATE_FAILED, 1700);
         }
       },
       error => {
-        this.failedAlertService.triggerSaveFailedAlert(Messages.PART_SAVE_FAILED, 2100);
+        this.failedAlertService.triggerSaveFailedAlert(Messages.CREATE_FAILED, 2100);
         console.error('Error sending data', error);
       }
     );

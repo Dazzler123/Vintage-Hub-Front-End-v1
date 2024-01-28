@@ -3,10 +3,11 @@ export class Messages {
 // ===================== SUCCESS MESSAGES ========================
 
   static PART_SAVED: string = 'Part Created!';
+  static ITEM_SAVED: string = 'Item Created!';
 
 
 // ===================== ERROR MESSAGES ========================
 
-  static PART_SAVE_FAILED: string = 'Create Failed!';
+  static CREATE_FAILED: string = 'Create Failed!';
 
 }

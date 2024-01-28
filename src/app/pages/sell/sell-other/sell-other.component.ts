@@ -2,6 +2,9 @@ import {Component} from '@angular/core';
 import {MatRadioModule} from '@angular/material/radio';
 import {FormsModule} from "@angular/forms";
 import {CrudTransactionService} from "../service/sell-other/crud-transactions/crud-transaction.service";
+import {SaveSuccessAlertService} from "../../../shared/alerts/saved/save-success-alert.service";
+import {SaveFailedAlertService} from "../../../shared/alerts/saved/save-failed-alert.service";
+import {Messages} from "@common/parts/messages";
 
 @Component({
   selector: 'app-sell-other',
@@ -25,7 +28,8 @@ export class SellOtherComponent {
   partPrice: number | null = null;
   partNegotiable: boolean = false;
 
-  constructor(private crudService: CrudTransactionService) {
+  constructor(private crudService: CrudTransactionService, private successAlertService: SaveSuccessAlertService,
+              private failedAlertService: SaveFailedAlertService) {
   }
 
 
@@ -51,10 +55,16 @@ export class SellOtherComponent {
 
     // Call the service method to send data to Python backend
     this.crudService.saveOtherAccessory(formData).subscribe(
-      response => {
-        console.log('Data sent successfully', response);
+      (success: boolean) => {
+        if (success) {
+          this.successAlertService.triggerSaveSuccessAlert(Messages.ITEM_SAVED, 1600);
+          console.log('Data saved successfully');
+        } else {
+          this.failedAlertService.triggerSaveFailedAlert(Messages.CREATE_FAILED, 1700);
+        }
       },
       error => {
+        this.failedAlertService.triggerSaveFailedAlert(Messages.CREATE_FAILED, 2100);
         console.error('Error sending data', error);
       }
     );
