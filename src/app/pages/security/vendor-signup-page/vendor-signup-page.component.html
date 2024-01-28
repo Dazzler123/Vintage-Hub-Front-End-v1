@@ -1,5 +1,5 @@
 <div id="vendor-signup-page" class="justify-center container">
-  <form id="customerForm" class="mt-5 col-11 pb-5 w-full">
+  <form id="customerForm" class="mt-5 pb-5 w-full">
     <h1 class="text-2xl text-center" id="staticBackdropLabel">Join us as a Vendor</h1>
     <div class="row g-3 mb-3 mt-3">
       <!-------------name & address------------->
@@ -12,7 +12,7 @@
       <div class="col">
         <label class="form-label">Address</label>
         <input id="txtCustomerAddress" type="text" class="form-control form-control fw-light"
-               placeholder="23/1, Galle Road, Panadura" aria-label="">
+               placeholder="853, Dr.Danister De Silva Road, Colombo 14." aria-label="">
       </div>
     </div>
     <!----------nic, email & contact no----------->
@@ -58,6 +58,85 @@
         <input id="nicDlImageFile" class="form-control" type="file">
       </div>
     </div>
+
+
+    <!--    <!===============================================================>-->
+
+    <!--------------- Business details --------------->
+    <div class="mt-5">
+      <h1 class="ms-3 text-2xl">Business Details</h1>
+      <div class="row g-3 mb-3 mt-3">
+        <!-------------name & address------------->
+        <div class="col">
+          <label class="form-label">Business Name</label>
+          <input type="text" class="form-control fw-light"
+                 placeholder="Avinda Motors Pvt. Ltd." aria-label="">
+
+          <label class="form-label font-bold mt-1 text-red-800">Please enter your legal business name which is included
+            in business registration form.</label>
+        </div>
+        <div class="col">
+          <label class="form-label">Registration Number</label>
+          <input type="text" class="form-control form-control fw-light"
+                 placeholder="853, REG340893-E-SL-3982" aria-label="">
+        </div>
+      </div>
+      <div class="row g-3 mb-3">
+        <div class="col">
+          <label class="form-label">Tax Identification Number (TIN)</label>
+          <input type="text" class="form-control fw-light"
+                 placeholder="1759013776" aria-label="">
+        </div>
+        <div class="col">
+          <label class="form-label">Address 1 (Current Location)</label>
+          <input type="text" class="form-control form-control fw-light"
+                 placeholder="853, Dr.Danister De Silva Road, Colombo 14." aria-label="">
+        </div>
+        <div class="col">
+          <label class="form-label">E-Mail Address</label>
+          <input type="email" class="form-ontrol form-control fw-light"
+                 placeholder="avindamotorssl@gmail.com">
+        </div>
+      </div>
+      <!------------------------->
+      <div class="row g-3">
+        <div class="col-4">
+          <label class="form-label">Contact Number 1</label>
+          <input type="text" class="form-control fw-light"
+                 placeholder="9234782934920" aria-label="">
+          <label class="form-label mt-2">Contact Number 2</label>
+          <input type="text" class="form-control fw-light"
+                 placeholder="9234782934920" aria-label="">
+        </div>
+        <div class="col-4 pt-1">
+          <label class="form-label">Address 2</label>
+          <input type="text" class="form-control form-control fw-light"
+                 placeholder="853, Dr.Danister De Silva Road, Colombo 14." aria-label="">
+        </div>
+        <div class="col-4 pt-1">
+          <label class="form-label text-blue-900 font-semibold">Accepted Payment Types</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select Payment Types</option>
+            <option value="1">Credit Card</option>
+            <option value="2">Online Transfer</option>
+            <option value="3">KOKO</option>
+          </select>
+        </div>
+        <div class="col-11 m-0 pt-5">
+          <label class="form-label text-xl">Other Information</label>
+          <div class="col-12">
+            <label class="form-label font-bold" style="color: darkblue">Provide a detailed
+              description of other information including payment methods, business description, etc.. you want to show
+              to your potential buyers.</label>
+            <textarea type="text"
+                      class="form-control"
+                      name="partDescription"
+                      style="height: 30vh"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!------------username & password---------->
     <div class="row g-3 mt-3">
       <div class="col-6">
@@ -76,7 +155,7 @@
       </div>
     </div>
     <!-----------save vendor details----------->
-    <button id="btnSaveCustomer" type="submit" class="btn btn-outline-primary mt-4 col-4">Create</button>
+    <button id="btnSaveCustomer" type="submit" class="btn btn-outline-primary mt-4 col-4">Submit</button>
   </form>
 
 </div>
