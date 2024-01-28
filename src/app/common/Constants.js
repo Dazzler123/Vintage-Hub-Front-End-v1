@@ -1,1 +1,0 @@
-let EMPTY_STRING = '';

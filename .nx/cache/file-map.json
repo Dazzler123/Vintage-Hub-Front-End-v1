@@ -38,7 +38,11 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
   },
-  "pathMappings": {},
+  "pathMappings": {
+    "@app/*": [
+      "app/*"
+    ]
+  },
   "nxJsonPlugins": [],
   "fileMap": {
     "projectFileMap": {
@@ -69,15 +73,15 @@
         },
         {
           "file": "angular.json",
-          "hash": "9109726066865823515"
+          "hash": "10346237167879728039"
         },
         {
           "file": "package-lock.json",
-          "hash": "1232975438758863534"
+          "hash": "8674992741739543119"
         },
         {
           "file": "package.json",
-          "hash": "3488803550975679971",
+          "hash": "15881657610280372458",
           "deps": [
             "npm:@angular/animations",
             "npm:@angular/cdk",
@@ -97,6 +101,7 @@
             "npm:postcss-cssnext",
             "npm:router",
             "npm:rxjs",
+            "npm:sweetalert2",
             "npm:tailwindcss",
             "npm:tslib",
             "npm:zone.js",
@@ -177,8 +182,16 @@
           ]
         },
         {
-          "file": "src/app/common/Constants.js",
-          "hash": "7231303930448073651"
+          "file": "src/app/common/constants.js",
+          "hash": "12916784038285086553"
+        },
+        {
+          "file": "src/app/common/parts/messages.js",
+          "hash": "6228847632376051690"
+        },
+        {
+          "file": "src/app/common/resources.js",
+          "hash": "11524187003759925316"
         },
         {
           "file": "src/app/core/loader-animation/loader-animation.component.html",
@@ -576,7 +589,7 @@
         },
         {
           "file": "src/app/pages/sell/sell-parts/sell-parts.component.ts",
-          "hash": "15947726593943243198",
+          "hash": "13855189229329336188",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/material",
@@ -623,7 +636,7 @@
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/sell-vehicle.component.html",
-          "hash": "2583897506077506105"
+          "hash": "17399268372822510737"
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/sell-vehicle.component.scss",
@@ -655,7 +668,7 @@
         },
         {
           "file": "src/app/pages/sell/service/sell-other/crud-transactions/crud-transaction.service.ts",
-          "hash": "10267805184896016792",
+          "hash": "16653462147498145572",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -671,7 +684,7 @@
         },
         {
           "file": "src/app/pages/sell/service/sell-parts/crud-transactions/crud-transaction.service.ts",
-          "hash": "17161850022491380644",
+          "hash": "6321045015708489019",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -720,6 +733,36 @@
           "hash": "9658294135952951001",
           "deps": [
             "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/shared/alerts/saved/save-failed-alert.service.spec.ts",
+          "hash": "10322004940896005747",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/shared/alerts/saved/save-failed-alert.service.ts",
+          "hash": "14123252302480473725",
+          "deps": [
+            "npm:@angular/core",
+            "npm:sweetalert2"
+          ]
+        },
+        {
+          "file": "src/app/shared/alerts/saved/save-success-alert.service.spec.ts",
+          "hash": "11198667071327597235",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/shared/alerts/saved/save-success-alert.service.ts",
+          "hash": "4189946477498330913",
+          "deps": [
+            "npm:@angular/core",
+            "npm:sweetalert2"
           ]
         },
         {
@@ -808,7 +851,7 @@
         },
         {
           "file": "src/main.ts",
-          "hash": "9374417435436826166",
+          "hash": "173312355137873117",
           "deps": [
             "npm:@angular/platform-browser-dynamic"
           ]
@@ -827,7 +870,7 @@
         },
         {
           "file": "tsconfig.json",
-          "hash": "3343339550490537441"
+          "hash": "13523408077765693486"
         },
         {
           "file": "tsconfig.spec.json",

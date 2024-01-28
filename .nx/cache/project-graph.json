@@ -38,6 +38,7 @@
               ],
               "styles": [
                 "@angular/material/prebuilt-themes/indigo-pink.css",
+                "node_modules/sweetalert2/dist/sweetalert2.min.css",
                 "src/styles.scss"
               ],
               "scripts": [],
@@ -12190,6 +12191,11 @@
       {
         "source": "vintage-hub-front-end-app",
         "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "vintage-hub-front-end-app",
+        "target": "npm:sweetalert2",
         "type": "static"
       },
       {
