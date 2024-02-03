@@ -1,4 +1,4 @@
-<form #myForm="ngForm" class="container w-full m-0 ps-10 grid grid-cols-2 gap-4">
+<form [formGroup]="sellVehicleFirstPage" class="container w-full m-0 ps-10 grid grid-cols-2 gap-4">
   <!--  Basic Information-->
   <div>
     <h1 class="text-xl pt-4 pl-3 font-serif m">Basic Information</h1>
@@ -6,39 +6,39 @@
       <div class="col-12">
         <label for="sell-vehicle-reg-no" class="form-label font-bold" style="color: red">Enter Vehicle Registration
           Number</label>
-        <input type="email" class="form-control" id="sell-vehicle-reg-no" placeholder="Ex: (WP) CAU-2024">
+        <input formControlName="registrationNo" name="registrationNo" type="email" class="form-control" id="sell-vehicle-reg-no" placeholder="Ex: (WP) CAU-2024">
         <label for="sell-vehicle-reg-no" class="form-label font-extralight italic pt-1">Your registration number will be
           encorded.</label>
       </div>
-      <select [(ngModel)]="selectedMake" name="selectedMake" class="form-select col-12 mt-4" (change)="loadVehicleModels()" aria-label="Default select example" id="sell-vehicle-make">
+      <select formControlName="make" [(ngModel)]="make" name="make" class="form-select col-12 mt-4" (change)="loadVehicleModels()" aria-label="Default select example" id="sell-vehicle-make">
         <option *ngFor="let make of makes" [value]="make">{{ make }}</option>
       </select>
-      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-model">
+      <select formControlName="model" name="model" class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-model">
         <option *ngFor="let model of models" [value]="model">{{ model }}</option>
       </select>
     </div>
     <div class="col-6 pt-4 ps-3">
-      <label for="inputEmail4" class="form-label font-bold mt-2">Odometer</label>
-      <input type="number" class="form-control" id="inputEmail4" placeholder="Ex: 340000">
+      <label for="odometer" class="form-label font-bold mt-2">Odometer</label>
+      <input formControlName="odometer" name="odometer" type="number" class="form-control" id="odometer" placeholder="Ex: 340000">
     </div>
   </div>
   <div class="col-11 m-0 p-0">
-    <select class="form-select col-12 mt-24" aria-label="Default select example" id="sell-vehicle-yom">
+    <select formControlName="yom" name="yom"  class="form-select col-12 mt-24" aria-label="Default select example" id="sell-vehicle-yom">
       <option selected>Year of Manufacture (YOM)</option>
       <option *ngFor="let yom of yoms" [value]="yom">{{ yom }}</option>
     </select>
     <label for="sell-vehicle-mileage" class="form-label font-bold mt-4">Fuel Efficiency (KMPL)</label>
-    <select class="form-select col-12 mt-1" aria-label="Default select example" id="sell-vehicle-mileage">
+    <select formControlName="mileage" name="mileage"  class="form-select col-12 mt-1" aria-label="Default select example" id="sell-vehicle-mileage">
       <option selected>Select Range</option>
       <option *ngFor="let range of mileageRanges" [value]="range">{{ range }}</option>
     </select>
     <div class="col-12 pt-4 ps-3">
-      <mat-radio-group aria-label="Select an option" id="sell-vehicle-fuel-type">
+      <mat-radio-group formControlName="fuelType" name="fuelType" aria-label="Select an option" id="sell-vehicle-fuel-type">
         <label class="form-label font-bold">Select Fuel Type</label>
         <br>
-        <mat-radio-button value="1">Petrol</mat-radio-button>
-        <mat-radio-button value="2">Diesel</mat-radio-button>
-        <mat-radio-button value="3">Electric</mat-radio-button>
+        <mat-radio-button value="Petrol">Petrol</mat-radio-button>
+        <mat-radio-button value="Diesel">Diesel</mat-radio-button>
+        <mat-radio-button value="Electric">Electric</mat-radio-button>
       </mat-radio-group>
     </div>
   </div>
@@ -48,13 +48,13 @@
   <div>
     <h1 class="text-xl pt-4 pl-3 font-serif">Technical Specifications</h1>
     <div class="col-6 ps-3">
-      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-engine-capacity">
+      <select formControlName="engineCapacity" name="engineCapacity" class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-engine-capacity">
         <option selected>Engine Type & Capacity</option>
         <option value="2000">5 to 10kmpl</option>
         <option value="2001">10 to 15 kmpl</option>
       </select>
 
-      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-transmission">
+      <select formControlName="transmission" name="transmission" class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-transmission">
         <option selected>Transmission Type</option>
         <option value="2000">4 Speed</option>
         <option value="2001">5 Speed</option>
@@ -62,7 +62,7 @@
         <option value="2001">7 Speed</option>
       </select>
 
-      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-drivetrain">
+      <select formControlName="driveTrain" name="driveTrain" class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-drivetrain">
         <option selected>Drivetrain Specification</option>
         <option value="2000">Front Wheel Drive</option>
         <option value="2001">Rear Wheel Drive</option>
@@ -70,7 +70,7 @@
       </select>
       <div class="col-12 mt-4">
         <label for="sell-vehicle-horsepower" class="form-label font-bold">Enter Horsepower / Torque (Optional)</label>
-        <input type="email" class="form-control" id="sell-vehicle-horsepower" placeholder="Ex: (WP) CAU-2024">
+        <input formControlName="horsepower" name="horsepower" type="email" class="form-control" id="sell-vehicle-horsepower" placeholder="Ex: (WP) CAU-2024">
       </div>
 <!--      <div class="col-12 mt-3">-->
 <!--        <div class="col-12">-->
@@ -87,10 +87,10 @@
     <div class="col-6 ps-3">
       <div class="col-12 mt-4">
         <label for="sell-vehicle-color" class="form-label font-bold">Select Color</label>
-        <input type="color" class="form-control" id="sell-vehicle-color" placeholder="Ex: (WP) CAU-2024">
+        <input formControlName="exteriorColor" name="exteriorColor" type="color" class="form-control" id="sell-vehicle-color" placeholder="Ex: (WP) CAU-2024">
       </div>
 
-      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-body-type">
+      <select formControlName="bodyType" name="bodyType" class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-body-type">
         <option selected>Body Type</option>
         <option value="2000">SUV</option>
         <option value="2001">Sedan</option>
@@ -99,7 +99,7 @@
       </select>
 
       <label for="sell-vehicle-wheel-size" class="form-label font-bold mt-4">Wheel Size & Type (Optional)</label>
-      <select class="form-select col-12" aria-label="Default select example" id="sell-vehicle-wheel-size">
+      <select formControlName="wheelSize" name="wheelSize" class="form-select col-12" aria-label="Default select example" id="sell-vehicle-wheel-size">
         <option selected>12 inch Alloy</option>
         <option value="2000">Front Wheel Drive</option>
         <option value="2001">Rear Wheel Drive</option>
@@ -107,13 +107,13 @@
       </select>
       <div class="col-12 mt-3">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="sell-vehicle-sunroof">
+          <input formControlName="haveSunroof" name="haveSunroof" class="form-check-input" type="checkbox" id="sell-vehicle-sunroof">
           <label class="form-check-label" for="sell-vehicle-sunroof">
             Sunroof (Optional)
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="sell-vehicle-convertible">
+          <input formControlName="isConvertible" name="isConvertible" class="form-check-input" type="checkbox" id="sell-vehicle-convertible">
           <label class="form-check-label" for="sell-vehicle-convertible">
             Convertible (Optional)
           </label>
@@ -128,15 +128,15 @@
     <div class="col-6 ps-3">
       <div class="col-12 mt-4">
         <label for="sell-vehicle-interior-color" class="form-label font-bold">Select Interior Color (Optional)</label>
-        <input type="color" class="form-control" id="sell-vehicle-interior-color" placeholder="Ex: (WP) CAU-2024">
+        <input formControlName="interiorColor" name="interiorColor" type="color" class="form-control" id="sell-vehicle-interior-color" placeholder="Ex: (WP) CAU-2024">
       </div>
       <div class="col-12 mt-4">
         <label for="sell-vehicle-seating" class="form-label font-bold">Seating Capacity</label>
-        <input type="number" class="form-control" id="sell-vehicle-seating">
+        <input formControlName="seatingCapacity" name="seatingCapacity" type="number" class="form-control" id="sell-vehicle-seating">
       </div>
       <div class="col-12 mt-4">
         <label for="sell-vehicle-infotainment" class="form-label font-bold">Infotainment System (Optional)</label>
-        <input type="text" class="form-control" id="sell-vehicle-infotainment" placeholder="Ex: Harman Kardon">
+        <input formControlName="infotainmentSys" name="infotainmentSys" type="text" class="form-control" id="sell-vehicle-infotainment" placeholder="Ex: Harman Kardon">
       </div>
     </div>
   </div>
@@ -147,13 +147,13 @@
     <div class="col-6 ps-3">
       <div class="col-12 mt-3">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="sell-vehicle-airbag-status">
+          <input formControlName="haveAirbags" name="haveAirbags" class="form-check-input" type="checkbox" id="sell-vehicle-airbag-status">
           <label class="form-check-label font-bold" for="sell-vehicle-airbag-status">
             Have Airbags ?
           </label>
         </div>
       </div>
-      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-abs">
+      <select formControlName="absType" name="absType" class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-abs">
         <option selected>Select ABS Type (Optional)</option>
         <option value="2000">No ABS</option>
         <option value="2001">Single Channel ABS</option>
@@ -161,7 +161,7 @@
       </select>
       <label for="sell-vehicle-esc" class="form-label font-bold mt-4">Select ECS (Electronic Stability Control)
         (Optional)</label>
-      <select class="form-select col-12" aria-label="Default select example" id="sell-vehicle-esc">
+      <select formControlName="escType" name="escType" class="form-select col-12" aria-label="Default select example" id="sell-vehicle-esc">
         <option selected>No ESC</option>
         <option value="2000">Standard ESC</option>
         <option value="2001">Advanced ESC</option>
@@ -170,7 +170,7 @@
       </select>
       <label for="sell-vehicle-cas" class="form-label font-bold mt-4">Select CAS (Collision Avoidance System)
         (Optional)</label>
-      <select class="form-select col-12" aria-label="Default select example" id="sell-vehicle-cas">
+      <select formControlName="casType" name="casType" class="form-select col-12" aria-label="Default select example" id="sell-vehicle-cas">
         <option selected>No CAS</option>
         <option value="2000">Forward Collision Warning (FCW)</option>
         <option value="2001">Automatic Emergency Braking (AEB)</option>
@@ -185,11 +185,11 @@
   </div>
   <div class="col-12 mt-10 mb-5">
     <div class="col-5">
-      <button type="button" class="btn btn-outline-warning" (click)="resetForm(myForm)">Reset</button>
+      <button type="button" class="btn btn-outline-warning" (click)="resetForm(sellVehicleFirstPage)">Reset</button>
     </div>
     <div class="col-5">
       <button type="button" class="btn btn-outline-primary"
-              (click)="navigateToNextPage('/sell-vehicle-second-page',myForm)">
+              (click)="navigateToNextPage('/sell-vehicle-second-page',sellVehicleFirstPage)">
         Next Page >>
       </button>
     </div>

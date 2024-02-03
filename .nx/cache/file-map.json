@@ -183,7 +183,7 @@
         },
         {
           "file": "src/app/common/constants.ts",
-          "hash": "6456544070002138509"
+          "hash": "10398279180791406475"
         },
         {
           "file": "src/app/common/parts/messages.ts",
@@ -629,14 +629,15 @@
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/communication/data-sharing.service.ts",
-          "hash": "7026749219742784863",
+          "hash": "7261079694632203295",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@angular/common"
           ]
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/inner/sell-vehicle-second-form/sell-vehicle-second-form.component.html",
-          "hash": "13368641499588026563"
+          "hash": "14924139705604885524"
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/inner/sell-vehicle-second-form/sell-vehicle-second-form.component.scss",
@@ -651,7 +652,7 @@
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/inner/sell-vehicle-second-form/sell-vehicle-second-form.component.ts",
-          "hash": "9425769998893001008",
+          "hash": "13499293592280518188",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/material",
@@ -660,7 +661,7 @@
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/sell-vehicle.component.html",
-          "hash": "17399268372822510737"
+          "hash": "1121774637236083469"
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/sell-vehicle.component.scss",
@@ -675,12 +676,13 @@
         },
         {
           "file": "src/app/pages/sell/sell-vehicle/sell-vehicle.component.ts",
-          "hash": "13953335808349529121",
+          "hash": "13984639332613285453",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/material",
             "npm:@angular/router",
-            "npm:@angular/forms"
+            "npm:@angular/forms",
+            "npm:@angular/common"
           ]
         },
         {
@@ -709,6 +711,22 @@
         {
           "file": "src/app/pages/sell/service/sell-parts/crud-transactions/crud-transaction.service.ts",
           "hash": "772154563684667844",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/pages/sell/service/sell-vehicles/transactions/transaction.service.spec.ts",
+          "hash": "17350827010252196484",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/pages/sell/service/sell-vehicles/transactions/transaction.service.ts",
+          "hash": "10975735716436139543",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",

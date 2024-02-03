@@ -13,4 +13,9 @@ export class Messages {
   static ACCOUNT_CREATION_FAILED: string = 'Account Creation Failed.';
   static SERVER_ERROR: string = 'Server Error';
 
+
+// ===================== ERROR MESSAGES ========================
+  static NO_MATCHING_PREDICTIONS_FOUND: string = 'No matching predictions found. Failed to predict price';
+  static FAILED_TO_PREDICT_PRICE: string = 'Price prediction failed!';
+
 }
