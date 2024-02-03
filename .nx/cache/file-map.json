@@ -39,8 +39,8 @@
     "typescript": "~5.2.2"
   },
   "pathMappings": {
-    "@app/*": [
-      "app/*"
+    "@common/*": [
+      "app/common/*"
     ]
   },
   "nxJsonPlugins": [],
@@ -133,7 +133,7 @@
         },
         {
           "file": "src/app/app-routing.module.ts",
-          "hash": "3097948416163387240",
+          "hash": "513309436276331184",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router"
@@ -172,7 +172,7 @@
         },
         {
           "file": "src/app/app.module.ts",
-          "hash": "5688004212906099865",
+          "hash": "8162947349408208586",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/platform-browser",
@@ -182,16 +182,16 @@
           ]
         },
         {
-          "file": "src/app/common/constants.js",
-          "hash": "12916784038285086553"
+          "file": "src/app/common/constants.ts",
+          "hash": "6456544070002138509"
         },
         {
-          "file": "src/app/common/parts/messages.js",
-          "hash": "6228847632376051690"
+          "file": "src/app/common/parts/messages.ts",
+          "hash": "10724508748433000401"
         },
         {
-          "file": "src/app/common/resources.js",
-          "hash": "11524187003759925316"
+          "file": "src/app/common/resources.ts",
+          "hash": "14179636025159333310"
         },
         {
           "file": "src/app/core/loader-animation/loader-animation.component.html",
@@ -460,11 +460,11 @@
         },
         {
           "file": "src/app/pages/security/login-page/login-page.component.html",
-          "hash": "13818120618881497653"
+          "hash": "15052902955948763247"
         },
         {
           "file": "src/app/pages/security/login-page/login-page.component.scss",
-          "hash": "18298065374185743436"
+          "hash": "11319048228759827758"
         },
         {
           "file": "src/app/pages/security/login-page/login-page.component.spec.ts",
@@ -475,10 +475,11 @@
         },
         {
           "file": "src/app/pages/security/login-page/login-page.component.ts",
-          "hash": "1414993814150423796",
+          "hash": "3243990590013699027",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:@angular/forms"
           ]
         },
         {
@@ -527,11 +528,11 @@
         },
         {
           "file": "src/app/pages/security/signup-page/signup-page.component.html",
-          "hash": "11383333977958400208"
+          "hash": "8285111827977625442"
         },
         {
           "file": "src/app/pages/security/signup-page/signup-page.component.scss",
-          "hash": "2281556325865836831"
+          "hash": "16544710747969690680"
         },
         {
           "file": "src/app/pages/security/signup-page/signup-page.component.spec.ts",
@@ -542,10 +543,33 @@
         },
         {
           "file": "src/app/pages/security/signup-page/signup-page.component.ts",
-          "hash": "12598378617991779228",
+          "hash": "2328471467355720320",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "src/app/pages/security/vendor-signup-page/vendor-signup-page.component.html",
+          "hash": "1895783020522881130"
+        },
+        {
+          "file": "src/app/pages/security/vendor-signup-page/vendor-signup-page.component.scss",
+          "hash": "17767527216455452760"
+        },
+        {
+          "file": "src/app/pages/security/vendor-signup-page/vendor-signup-page.component.spec.ts",
+          "hash": "9868067312540101221",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/pages/security/vendor-signup-page/vendor-signup-page.component.ts",
+          "hash": "6192815268753671625",
+          "deps": [
+            "npm:@angular/core"
           ]
         },
         {
@@ -565,7 +589,7 @@
         },
         {
           "file": "src/app/pages/sell/sell-other/sell-other.component.ts",
-          "hash": "2372399787945732020",
+          "hash": "7628258076482177241",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/material",
@@ -589,7 +613,7 @@
         },
         {
           "file": "src/app/pages/sell/sell-parts/sell-parts.component.ts",
-          "hash": "13855189229329336188",
+          "hash": "13118376834527048865",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/material",
@@ -668,7 +692,7 @@
         },
         {
           "file": "src/app/pages/sell/service/sell-other/crud-transactions/crud-transaction.service.ts",
-          "hash": "16653462147498145572",
+          "hash": "10624796067682063595",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -684,7 +708,23 @@
         },
         {
           "file": "src/app/pages/sell/service/sell-parts/crud-transactions/crud-transaction.service.ts",
-          "hash": "6321045015708489019",
+          "hash": "772154563684667844",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/app/pages/sell/service/user-account/crud-transaction.service.spec.ts",
+          "hash": "3040065715047453495",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/app/pages/sell/service/user-account/crud-transaction.service.ts",
+          "hash": "8242979216072162855",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -715,7 +755,7 @@
         },
         {
           "file": "src/app/pages/vehicles/vehicle-view-page/vehicle-view-page.component.html",
-          "hash": "1572652970952022682"
+          "hash": "10217441617177021341"
         },
         {
           "file": "src/app/pages/vehicles/vehicle-view-page/vehicle-view-page.component.scss",
@@ -730,9 +770,11 @@
         },
         {
           "file": "src/app/pages/vehicles/vehicle-view-page/vehicle-view-page.component.ts",
-          "hash": "9658294135952951001",
+          "hash": "3923459769976069339",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:@angular/material"
           ]
         },
         {
@@ -790,7 +832,7 @@
         },
         {
           "file": "src/app/shared/cards/vehicle-view-card/vehicle-view-card.component.html",
-          "hash": "10984712390508103794"
+          "hash": "17365157549239359580"
         },
         {
           "file": "src/app/shared/cards/vehicle-view-card/vehicle-view-card.component.scss",
@@ -805,9 +847,10 @@
         },
         {
           "file": "src/app/shared/cards/vehicle-view-card/vehicle-view-card.component.ts",
-          "hash": "6930336409747979184",
+          "hash": "1282446890688213873",
           "deps": [
-            "npm:@angular/core"
+            "npm:@angular/core",
+            "npm:@angular/router"
           ]
         },
         {
@@ -838,6 +881,10 @@
           "hash": "3244421341483603138"
         },
         {
+          "file": "src/assets/Screenshot_20210518-100858.png",
+          "hash": "10757096922336290776"
+        },
+        {
           "file": "src/favicon.ico",
           "hash": "3988961587069885523"
         },
@@ -851,7 +898,7 @@
         },
         {
           "file": "src/main.ts",
-          "hash": "173312355137873117",
+          "hash": "9374417435436826166",
           "deps": [
             "npm:@angular/platform-browser-dynamic"
           ]
@@ -870,7 +917,7 @@
         },
         {
           "file": "tsconfig.json",
-          "hash": "13523408077765693486"
+          "hash": "4536810204974116258"
         },
         {
           "file": "tsconfig.spec.json",

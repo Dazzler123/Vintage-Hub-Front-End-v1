@@ -58,14 +58,13 @@ export class SellOtherComponent {
       (success: boolean) => {
         if (success) {
           this.successAlertService.triggerSaveSuccessAlert(Messages.ITEM_SAVED, 1600);
-          console.log('Data saved successfully');
         } else {
           this.failedAlertService.triggerSaveFailedAlert(Messages.CREATE_FAILED, 1700);
         }
       },
       error => {
-        this.failedAlertService.triggerSaveFailedAlert(Messages.CREATE_FAILED, 2100);
-        console.error('Error sending data', error);
+        this.failedAlertService.triggerSaveFailedAlert(Messages.SERVER_ERROR, 2100);
+        console.error('Error :', error);
       }
     );
   }

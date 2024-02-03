@@ -5,13 +5,13 @@
       <!-------------name & address------------->
       <div class="col">
         <label class="form-label">Full Name</label>
-        <input id="txtCustomerName" type="text" class="form-control fw-light"
+        <input [(ngModel)]="userFullName" name="userFullName" type="text" class="form-control fw-light"
                placeholder="D B Hewagamage" aria-label="">
         <div class="form-text fst-italic">Please enter your full name with initials.</div>
       </div>
       <div class="col">
         <label class="form-label">Address</label>
-        <input id="txtCustomerAddress" type="text" class="form-control form-control fw-light"
+        <input [(ngModel)]="userAddress" name="userAddress" type="text" class="form-control form-control fw-light"
                placeholder="23/1, Galle Road, Panadura" aria-label="">
       </div>
     </div>
@@ -19,17 +19,18 @@
     <div class="row g-3 mb-3">
       <div class="col">
         <label class="form-label">National Identity Card Number</label>
-        <input id="txtCustomerNIC" type="text" class="form-control fw-light"
+        <input [(ngModel)]="userNic" name="userNic" type="text" class="form-control fw-light"
                placeholder="923478293492V" aria-label="">
       </div>
       <div class="col">
         <label class="form-label">Email address</label>
-        <input id="txtCustomerEmail" type="text" class="form-control form-control fw-light"
+        <input [(ngModel)]="userEmailAddress" name="userEmailAddress" type="text"
+               class="form-control form-control fw-light"
                placeholder="pragmaticdeveloper@gmail.com" aria-label="">
       </div>
       <div class="col">
         <label class="form-label">Contact Number</label>
-        <input id="txtCustomerContactNo" type="text" class="form-control form-control fw-light"
+        <input [(ngModel)]="userContactNo" name="userContactNo" type="text" class="form-control form-control fw-light"
                placeholder="0773434343"
                aria-label="">
       </div>
@@ -38,15 +39,15 @@
     <div class="row g-3">
       <div class="col-4">
         <label class="form-label">Driving License Number</label>
-        <input id="txtCustomerDLNo" type="text" class="form-control fw-light"
+        <input [(ngModel)]="userDLNo" name="userDLNo" type="text" class="form-control fw-light"
                placeholder="9234782934920" aria-label="">
       </div>
       <div class="col-4 pt-4">
-        <select id="cbxCustomerGender" class="form-select" aria-label="Default select example">
+        <select [(ngModel)]="userGender" name="userGender" class="form-select" aria-label="Default select example">
           <option selected>Select Gender</option>
-          <option value="1">Male</option>
-          <option value="2">Female</option>
-          <option value="3">Other</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
         </select>
       </div>
     </div>
@@ -55,19 +56,19 @@
       <div class="col-8">
         <label class="form-label fw-light">Upload National Identity Card Image or Driving License
           Image</label>
-        <input id="nicDlImageFile" class="form-control" type="file">
+        <input [(ngModel)]="userNicImage" name="userNicImage" class="form-control" type="file">
       </div>
     </div>
     <!------------username & password---------->
     <div class="row g-3 mt-3">
       <div class="col-6">
-        <input id="txtCustomerUsername" type="text" class="form-control" placeholder="New Username">
+        <input [(ngModel)]="userNewUserName" name="userNewUserName" type="text" class="form-control" placeholder="New Username">
         <div class="form-text fst-italic">Your username should be least three characters long and
           must not contain special characters or emoji's.
         </div>
       </div>
       <div class="col-6">
-        <input id="pwdCustomerPassword" type="password" class="form-control"
+        <input [(ngModel)]="userNewPassword" name="userNewPassword" type="password" class="form-control"
                placeholder="New Password">
         <div class="form-text fst-italic">Your password must be 8-20 characters long, contain
           letters and numbers,
@@ -76,6 +77,6 @@
       </div>
     </div>
     <!-----------save user details----------->
-    <button id="btnSaveCustomer" type="submit" class="btn btn-outline-primary mt-4 col-4">Create</button>
+    <button type="button" class="btn btn-outline-primary mt-4 col-4" (click)="createUserAccount()">Create</button>
   </form>
 </div>

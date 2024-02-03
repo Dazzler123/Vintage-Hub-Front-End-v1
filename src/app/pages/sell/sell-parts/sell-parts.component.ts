@@ -65,7 +65,7 @@ export class SellPartsComponent {
         }
       },
       error => {
-        this.failedAlertService.triggerSaveFailedAlert(Messages.CREATE_FAILED, 2100);
+        this.failedAlertService.triggerSaveFailedAlert(Messages.SERVER_ERROR, 2100);
         console.error('Error sending data', error);
       }
     );

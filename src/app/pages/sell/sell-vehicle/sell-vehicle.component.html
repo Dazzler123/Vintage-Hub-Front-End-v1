@@ -10,39 +10,29 @@
         <label for="sell-vehicle-reg-no" class="form-label font-extralight italic pt-1">Your registration number will be
           encorded.</label>
       </div>
-      <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-make">
-        <option selected>Select Make</option>
-        <option value="1">Benz</option>
-        <option value="2">Toyota</option>
-        <!-- Add more options as needed -->
+      <select [(ngModel)]="selectedMake" name="selectedMake" class="form-select col-12 mt-4" (change)="loadVehicleModels()" aria-label="Default select example" id="sell-vehicle-make">
+        <option *ngFor="let make of makes" [value]="make">{{ make }}</option>
       </select>
       <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-model">
-        <option selected>Select Model</option>
-        <option value="1">CLA 200</option>
-        <option value="2">Premio LS</option>
-        <!-- Add more options as needed -->
+        <option *ngFor="let model of models" [value]="model">{{ model }}</option>
       </select>
+    </div>
+    <div class="col-6 pt-4 ps-3">
+      <label for="inputEmail4" class="form-label font-bold mt-2">Odometer</label>
+      <input type="number" class="form-control" id="inputEmail4" placeholder="Ex: 340000">
     </div>
   </div>
   <div class="col-11 m-0 p-0">
     <select class="form-select col-12 mt-24" aria-label="Default select example" id="sell-vehicle-yom">
       <option selected>Year of Manufacture (YOM)</option>
-      <option value="2000">2000</option>
-      <option value="2001">2001</option>
-      <!-- Add more options as needed -->
+      <option *ngFor="let yom of yoms" [value]="yom">{{ yom }}</option>
     </select>
-    <select class="form-select col-12 mt-4" aria-label="Default select example" id="sell-vehicle-mileage">
-      <label for="sell-vehicle-mileage" class="form-label font-bold">Fuel Efficiency (KMPL)</label>
+    <label for="sell-vehicle-mileage" class="form-label font-bold mt-4">Fuel Efficiency (KMPL)</label>
+    <select class="form-select col-12 mt-1" aria-label="Default select example" id="sell-vehicle-mileage">
       <option selected>Select Range</option>
-      <option value="2000">5 to 10kmpl</option>
-      <option value="2001">10 to 15 kmpl</option>
-      <option value="2001">15 to 20 kmpl</option>
-      <option value="2001">20 to 25 kmpl</option>
-      <option value="2001">25 to 30 kmpl</option>
-      <option value="2001">30 to 35 kmpl</option>
-      <!-- Add more options as needed -->
+      <option *ngFor="let range of mileageRanges" [value]="range">{{ range }}</option>
     </select>
-    <div class="col-12 pt-5 ps-3">
+    <div class="col-12 pt-4 ps-3">
       <mat-radio-group aria-label="Select an option" id="sell-vehicle-fuel-type">
         <label class="form-label font-bold">Select Fuel Type</label>
         <br>
@@ -52,6 +42,7 @@
       </mat-radio-group>
     </div>
   </div>
+
 
   <!--  Technical Specifications-->
   <div>

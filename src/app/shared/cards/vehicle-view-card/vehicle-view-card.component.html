@@ -6,6 +6,8 @@
   </div>
   <p class="title">Mercedes Benz CLA 200 AMG</p>
 <!--  <p class="text">Check all your favourites in one place.</p>-->
-  <button id="btn-vehicle-detail-view" type="button" class="btn btn-outline-primary font-bold w-2/3">Detail View</button>
+  <button id="btn-vehicle-detail-view" type="button"
+          (click)="navigateToDetailView('/vehicle-detail/',vehicleId)"
+          class="btn btn-outline-primary font-bold w-2/3">Detail View</button>
   <button id="btn-buy-vehicle" type="button" class="btn btn-outline-success font-bold w-2/3 mt-1 mb-4">Buy</button>
 </div>
